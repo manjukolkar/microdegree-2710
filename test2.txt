@@ -1,2 +1,4 @@
 echo "This will explain how the conflict works"
 echo "this is  second time conflict"
+echo "This will explain how the conflict works"
+echo "This will explain how the conflict works"
