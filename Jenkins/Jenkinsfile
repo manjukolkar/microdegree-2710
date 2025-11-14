@@ -3,6 +3,14 @@ pipeline {
         label 'slave'
     }  
 
+    parameters{
+        choice(
+            name: 'Branch name',
+            choices: ['dev','main','prod'],
+            description: 'Select your branch'
+            )
+    }
+
     stages{
         stage('Server date'){
             steps{
