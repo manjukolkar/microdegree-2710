@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages{
+        stage('INFO OF CPU:'){
+            steps sh "lscpu"
+        }
+        stages{
+            stage('CPU details'){
+                steps sh "lscpu" 
+            }
+        }
+        stages('CPU Usage Stats'){
+            steps sh "mpstart"
+        }
+    }
+}
