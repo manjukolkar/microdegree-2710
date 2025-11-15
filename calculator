@@ -1,0 +1,47 @@
+// Simple Calculator in Groovy
+
+println "=== Simple Groovy Calculator ==="
+print "Enter first number: "
+def num1 = System.in.newReader().readLine().toDouble()
+
+print "Enter second number: "
+def num2 = System.in.newReader().readLine().toDouble()
+
+println "\nChoose operation:"
+println "1. Add (+)"
+println "2. Subtract (-)"
+println "3. Multiply (*)"
+println "4. Divide (/)"
+print "Enter choice (1-4): "
+def choice = System.in.newReader().readLine()
+
+def result
+
+switch(choice) {
+    case "1":
+        result = num1 + num2
+        println "Result: $num1 + $num2 = $result"
+        break
+
+    case "2":
+        result = num1 - num2
+        println "Result: $num1 - $num2 = $result"
+        break
+
+    case "3":
+        result = num1 * num2
+        println "Result: $num1 * $num2 = $result"
+        break
+
+    case "4":
+        if(num2 != 0) {
+            result = num1 / num2
+            println "Result: $num1 / $num2 = $result"
+        } else {
+            println "Error: Division by zero is not allowed."
+        }
+        break
+
+    default:
+        println "Invalid choice."
+}
