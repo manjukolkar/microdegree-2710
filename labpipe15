@@ -3,15 +3,7 @@ pipeline {
 
     stages{
         stage('IP Address INFO:'){
-            steps sh "hostname -I"
-        }
-        stages{
-            stage('CPU details'){
-                steps sh "lscpu" 
-            }
-        }
-        stages('Disk Usage'){
-            steps sh "dnf -u"
+            steps{sh "hostname -I"}
         }
     }
 }
