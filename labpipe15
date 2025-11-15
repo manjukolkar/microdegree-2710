@@ -5,5 +5,8 @@ pipeline {
         stage('IP Address INFO:'){
             steps{sh "hostname -I"}
         }
+    stages{
+        stage('Cpu info:'){
+            steps{sh "lscpu"}
     }
 }
