@@ -2,12 +2,16 @@ pipeline {
     agent any
 
     stages{
-        stage('INFO OF CPU:'){
-            steps sh "lscpu"
+        stage('IP Address INFO:'){
+            steps sh "hostname -I"
         }
-    
-        stages('CPU Usage Stats'){
-            steps sh "mpstart"
+        stages{
+            stage('CPU details'){
+                steps sh "lscpu" 
+            }
+        }
+        stages('Disk Usage'){
+            steps sh "dnf -u"
         }
     }
 }
