@@ -1,13 +1,17 @@
 pipeline {
     agent any
 
-    stages{
-        stage('IP Address INFO:'){
-            steps{sh "hostname -I"}
+    stages {
+        stage('IP Address INFO') {
+            steps {
+                sh "hostname -I"
+            }
         }
-    stages{
-        stage('Cpu info:'){
-            steps{sh "lscpu"}
+
+        stage('CPU Info') {
+            steps {
+                sh "lscpu"
+            }
+        }
     }
-}
 }
