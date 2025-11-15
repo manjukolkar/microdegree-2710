@@ -4,8 +4,8 @@ pipeline {
         stage('Add Numbers') {
             steps {
                 script {
-                    def a = 10
-                    def b = 15
+                    def a = 40
+                    def b = 29
                     def sum = a + b
                     echo "Sum = ${sum}"
                 }
