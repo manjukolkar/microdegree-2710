@@ -1,21 +1,15 @@
-def colors = [
-        "\u001B[31m", // Red
-        "\u001B[33m", // Orange/Yellow
-        "\u001B[32m", // Green
-        "\u001B[36m", // Cyan
-        "\u001B[34m", // Blue
-        "\u001B[35m"  // Violet
-]
-
-def reset = "\u001B[0m"
-def rows = 6  // Pyramid height
-
-(1..rows).each { i ->
-    def spaces = " " * (rows - i)
-
-    // pick rainbow color for this row
-    def color = colors[(i - 1) % colors.size()]
-    def stars = "*" * (2 * i - 1)
-
-    println spaces + color + stars + reset
+pipeline {
+    agent any
+    stages {
+        stage('Add Numbers') {
+            steps {
+                script {
+                    def a = 10
+                    def b = 15
+                    def sum = a + b
+                    echo "Sum = ${sum}"
+                }
+            }
+        }
+    }
 }
