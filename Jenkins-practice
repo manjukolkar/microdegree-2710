@@ -26,6 +26,6 @@ stage('Memory Usage') {
 steps {
 sh 'free -h'
 }
-{
+}
 }
 }
