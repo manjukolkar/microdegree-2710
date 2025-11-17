@@ -22,5 +22,10 @@ steps {
 sh 'du -h'
 }
 }
+stage('Memory Usage') {
+steps {
+sh 'free -h'
+}
+{
 }
 }
