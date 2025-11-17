@@ -1,1 +1,27 @@
-
+pipeline 
+{
+agent any
+stages{
+stage (Date) {
+steps{
+sh 'date'
+}
+}
+stage(IP Address){
+steps {
+sh'ip addr'
+}
+}
+stage
+(Cpu Details){
+steps {
+sh 'lscpu'
+}
+}
+stage (Disk Usage) {
+steps {
+sh 'du -h'
+}
+}
+}
+}
